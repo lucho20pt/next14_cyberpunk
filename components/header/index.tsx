@@ -1,36 +1,30 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+import NavLinks from './nav-links'
 
 export const Header = () => {
+  const pathname = usePathname()
+
   return (
-    <header className="flex flex-row w-full h-14 md:h-20 items-center justify-around mx-auto shadow-md shadow-cyan-500">
-      <div className="text-2xl text-cyan-500 hover:text-cyan-500/90">
-        <Link href="/">cyberpunk</Link>
+    <header className="flex flex-row w-full h-20 md:h-28 items-center justify-around mx-auto shadow shadow-cyan-600 bg-cyan-100/20 mb-20">
+      <div className="relative top-4 sm:top-0 text-2xl text-cyan-500 hover:text-cyan-500/90">
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="logo cyberpunk"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="max-w-[100px] w-[150px] h-auto"
+          />
+        </Link>
       </div>
-      <nav>
-        <ul className="flex flex-row items-end justify-around gap-x-8 text-lg">
-          <li>
-            <Link className="hover:opacity-70 hover:text-cyan-400" href="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:opacity-70 hover:text-cyan-400"
-              href="/cards"
-            >
-              Cards
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:opacity-70 hover:text-cyan-400"
-              href="/about"
-            >
-              About
-            </Link>
-          </li>
-        </ul>
+      <nav className="flex flex-row h-full py-4 self-baseline">
+        <NavLinks />
       </nav>
     </header>
   )
