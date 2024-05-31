@@ -10,8 +10,8 @@ export const Header = () => {
   const pathname = usePathname()
 
   return (
-    <header className="flex flex-row w-full h-20 md:h-28 items-center justify-around mx-auto shadow shadow-cyan-600 bg-cyan-100/20 mb-20">
-      <div className="relative top-4 sm:top-0 text-2xl text-cyan-500 hover:text-cyan-500/90">
+    <header className="flex flex-row w-full h-20 items-center justify-around mx-auto shadow shadow-cyan-600 bg-gray-400/10 mb-20">
+      <div className="relative top-4 text-2xl text-cyan-500 hover:text-cyan-500/90">
         <Link href="/">
           <Image
             src="/logo.png"
