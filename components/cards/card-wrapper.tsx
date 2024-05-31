@@ -13,7 +13,7 @@ interface CardWrapperProps {
 
 export const CardWrapper = ({ cards }: CardWrapperProps) => {
   return (
-    <div className="w-full grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 p-8 py-10 rounded-xl border-4 border-black bg-cyan-400/10">
+    <div className="w-full grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
       {cards.map((card, index) => (
         <Card key={card.id} {...card} />
       ))}

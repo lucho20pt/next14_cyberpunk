@@ -35,7 +35,7 @@ export const Card = ({
     <div
       key={id}
       className="flex w-full h-auto flex-col items-center cursor-default
-       border-black border-8 rounded text-xl bg-red-400/5"
+       border-black border-8 rounded text-xl bg-cyan-500/50"
     >
       <header className="px-2 flex w-full flex-row items-center justify-between shadow-inner shadow-gray-200/50 bg-gray-900/70">
         <div className="p-1">{name}</div>
